@@ -7,12 +7,15 @@ import math #import math library
 mode = input('Chose mode (uni/bi): ')
 # uni for unitary operations
 if (mode == "uni"):
-    print('You can calculate the factorial, .')
-    operator = input('Enter operator (!): ')
+    print('You can calculate the factorial(!), natural logarifm(ln)  .')
+    operator = input('Enter operator (!, ln): ')
     num_2 = float(input('Enter number: ',))
 
     if (operator == "!"):
         print("Result = ", math.gamma(num_2 + 1))
+    if (operator == "ln"):
+        print("Result = ", math.log(num_2))
+
 
 #bi for binary operations
 elif (mode == "bi"):
