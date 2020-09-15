@@ -12,11 +12,14 @@ if (mode == "uni"):
     num_2 = float(input('Enter number: ',))
 
     if (operator == "!"):
-        print("Result = ", math.factorial(4))
+        result = 1
+        for i in range(2, int(num_2 + 1)):
+            result *= i
+        print("Result = ", result)
 
 elif (mode == "bi"):
     num_1 = float(input('Enter first number: ',))
-    operator = input('Enter one operator (+, -, *, /, **, !): ')
+    operator = input('Enter one operator (+, -, *, /, **): ')
     num_2 = float(input('Enter second number: ',))
 
     if (operator == "+"):
