@@ -1,5 +1,6 @@
 print('Hello! This is a calculator-program. ')
-print('It has two modes - uni for unitary operations and bi for binary operations ',)
+print('It has two modes - uni for unitary operations (!, ln) and ')
+print('bi for binary operations (+, -, *, /, **)',)
 print()
 
 import math #import math library
@@ -7,14 +8,18 @@ import math #import math library
 mode = input('Chose mode (uni/bi): ')
 # uni for unitary operations
 if (mode == "uni"):
-    print('You can calculate the factorial(!), natural logarifm(ln)  .')
-    operator = input('Enter operator (!, ln): ')
+    print('You can calculate the factorial(!), natural logarithm(ln)  .')
+    operator = input('Enter one operator (!, ln): ')
     num_2 = float(input('Enter number: ',))
 
     if (operator == "!"):
         print("Result = ", math.gamma(num_2 + 1))
     if (operator == "ln"):
-        print("Result = ", math.log(num_2))
+        if (num_2 > 0):
+            print("Result = ", math.log(num_2))
+        else:
+            print("Logarithm not defined. Number should be > 0")
+
 
 
 #bi for binary operations
