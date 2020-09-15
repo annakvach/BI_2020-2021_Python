@@ -1,11 +1,9 @@
-
 print('Hello! This is a calculator-program. ')
 print('It has two modes - uni for unitary operations and bi for binary operations ',)
 print()
+
 mode = input('Chose mode (uni/bi): ')
-
-import math #import library
-
+# uni for unitary operations
 if (mode == "uni"):
     print('You can calculate the factorial, .')
     operator = input('Enter operator (!): ')
@@ -17,6 +15,7 @@ if (mode == "uni"):
             result *= i
         print("Result = ", result)
 
+#bi for binary operations
 elif (mode == "bi"):
     num_1 = float(input('Enter first number: ',))
     operator = input('Enter one operator (+, -, *, /, **): ')
@@ -40,8 +39,9 @@ elif (mode == "bi"):
     elif (operator == "**"):
         result = num_1 ** num_2
         print("Result = ", result)
-
-
+#ERROR. incorrect mode
+else:
+    print('Error. You choose incorrect mode')
 
 
 
