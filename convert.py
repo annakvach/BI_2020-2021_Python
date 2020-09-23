@@ -78,20 +78,19 @@ while start == "y":
                                 denomination_2 == "platinum"):
                             for_dic = str(denomination_1 + 'to' + denomination_2)
                             # if all is ok - catch a value from dictionary
-                            if coin_dict.get(for_dic) is not None:
-                                value_dic = coin_dict.get(for_dic)
-                                # equal exchange
-                                if (int(float(n_den_1) / float(value_dic))) > 1:
-                                    print('Goblin Banker: I can give you', ' ', float(n_den_1) / float(value_dic), ' ',
-                                          denomination_2, 's', sep="")
-                                    # exchange with the remainder
-                                    if (int(float(n_den_1) % float(value_dic))) > 1:
-                                        print('Goblin Banker: But keep your pitiful', ' ',
-                                              (float(n_den_1) % float(value_dic)), ' ', denomination_1, 's', ' ',
-                                              'for yourself..', sep="")
-                                # negative numbers or just not enough money
-                                else:
-                                    print("Goblin Banker: HAHAHAHA! Come back when you have more coins!")
+                            value_dic = coin_dict.get(for_dic)
+                            # equal exchange
+                            if (int(float(n_den_1) / float(value_dic))) > 1:
+                                print('Goblin Banker: I can give you', ' ', float(n_den_1) / float(value_dic), ' ',
+                                      denomination_2, 's', sep="")
+                                # exchange with the remainder
+                                if (int(float(n_den_1) % float(value_dic))) > 1:
+                                    print('Goblin Banker: But keep your pitiful', ' ',
+                                          (float(n_den_1) % float(value_dic)), ' ', denomination_1, 's', ' ',
+                                          'for yourself..', sep="")
+                            # negative numbers or just not enough money
+                            else:
+                                print("Goblin Banker: HAHAHAHA! Come back when you have more coins!")
                         # wrong input in denomination_2
                         else:
                             print("Goblin Banker: What the hell are ", denomination_2, "s", "?!!", sep="")
@@ -152,8 +151,6 @@ while start == "y":
                     continue
 
                 my_coins: int = my_copper + my_silver * 10 + my_electum * 50 + my_gold * 100 + my_platinum * 1000
-
-                print(my_coins)
 
                 Platinums = 0
                 Golds = 0
