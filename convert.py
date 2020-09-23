@@ -183,4 +183,4 @@ while start == "y":
         print("Goodbye!")
         start = input("Do you want to continue? (y/n) ")
 else:
-    print("Gooodbye!")
+    print("Auf Wiedersehen!")
