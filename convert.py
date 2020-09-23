@@ -1,8 +1,10 @@
 print("Converter program. ")
-print("Based on '...Для конвертера можно взять любые величины, но выберите что-то интереснее метров и километров...' ")
-print("and D&D 5e ")
+print("Based on '...Для конвертера можно взять любые величины, но выберите что-то интереснее метров и километров...' and D&D 5e. ")
+print("(https://5thsrd.org/adventuring/equipment/coins/)")
 print()
-print("You are in bank. ")
+print("You have tons of coins that you earned in dangerous adventures and you want to exchange them.")
+print("So you are in bank.")
+print("(Goblin Banker may be disrespectful if he doesn't know what to do.)")
 print()
 
 # make dictionary for coin exchange
@@ -41,15 +43,19 @@ def isDigit(x):
 
 # cycle start
 start = input("Start? (y/n) ")
-
+print()
 while start == "y":
     print()
     goblin_or = input("Do you want to talk with goblin? (y/n) ")
+    print()
     # interact with goblin or not
     if goblin_or == "y":
-        choose_exchange = input("Goblin Banker: Do you want exchange_1 or exchange_2? (exchange_1/exchange_2) ")
+        print("Goblin Banker: Do you want to exchange a specific denomination (1)")
+        print("or simply exchange all your savings for coins of a larger denomination?? (2)")
+        print()
+        choose_exchange = input("Input 1 or 2 to choose the type of operation: ")
         # exchange mode = exchange_1
-        if choose_exchange == "exchange_1":
+        if choose_exchange == "1":
             denomination_1 = input(
                 'Goblin Banker: What denomination of coins do you want to exchange? (copper/silver/electrum/gold/platinum): ')
             # choose first denomination
@@ -100,8 +106,8 @@ while start == "y":
                 print("Goblin Banker: What the hell are ", denomination_1, "s", "?!!", sep="")
                 print("Goblin Banker: I am not a ", denomination_1, "s", " seller", "!", sep="")
         # exchange mode = exchange_2
-        elif choose_exchange == "exchange_2":
-            start_2 = input("Do you want to .... (y/n)")
+        elif choose_exchange == "2":
+            start_2 = input("Do you want to exchange all your savings for coins of a larger denomination? (y/n)")
             while start_2 == "y":
                 # input for exchange_2 and check is it number
                 # my_copper_input
@@ -175,7 +181,7 @@ while start == "y":
                 print("Silvers: ", Silvers)
                 print("Coppers: ", my_coins)
 
-                start_2 = input("Do you want to again .... (y/n)")
+                start_2 = input("Goblin Banker: Do you want to do it again (y/n)")
     elif goblin_or == "n":
         print("Goodbye!")
         start = input("Do you want to continue? (y/n) ")
