@@ -1,6 +1,8 @@
 print("Introduction. converter in dnd style .....")
-print("You are in bank. You must currency exchange because dragon")
+print("You are in bar. ")
+print()
 
+# make dictionary for coin exchange
 coin_dict={
     'coppertosilver':'10',
     'coppertoelectrum':'50',
@@ -26,19 +28,18 @@ coin_dict={
 #choose between: you can exchange coins of one denomination for another///you can exchange small coins for larger ones//
 
 # you can exchange coins of one denomination for another/
-denomination_1 = input('What denomination of the coins do you want to exchange? (copper/silver/electrum/gold/platinum): ')
-n_den_1 = input('How many ' + denomination_1 + 's' + ' ' + 'do you want to exchange? ')
-denomination_2 = input('And what the denomination of the coins do you want to get? (Copper/Silver/Electrum/Gold/Platinum): ')
+denomination_1 = input('Goblin Banker: What denomination of coins do you want to exchange? (copper/silver/electrum/gold/platinum): ')
+n_den_1 = input('Goblin Banker: How many ' + denomination_1 + 's' + ' ' + 'do you want to exchange? ')
+denomination_2 = input('Goblin Banker: And what the denomination of the coins do you want to get? (copper/silver/electrum/gold/platinum): ')
 
 for_dic = str(denomination_1 + 'to' + denomination_2)
 
-if (dic.get(for_dic) != None):
-    value_dic = dic.get(for_dic)
-    print('You will get', ' ', int(n_den_1) / int(value_dic), ' ', denomination_2, 's', sep="")
+if (coin_dict.get(for_dic) != None):
+    value_dic = coin_dict.get(for_dic)
+    print('Goblin Banker: I will give you', ' ', int(float(n_den_1) / float(value_dic)), ' ', denomination_2, 's', sep="")
+    if ((int(float(n_den_1) % float(value_dic))) > 1):
+        print('Goblin Banker: Keep your pitiful', ' ', int((float(n_den_1) % float(value_dic))), ' ', denomination_1, 's', ' ',  'for yourself..', sep="")
+else:
+    print('This denomination is unknown to me.')
 
-
-
-    print('This denomination is unknown to us.')
-elif (denomination_1 == denomination_2):
-    print('This is a joke? It does not make sense. Try again.')
 
