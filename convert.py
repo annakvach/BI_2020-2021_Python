@@ -33,7 +33,7 @@ coin_dict = {
 
 
 # for type control
-def isDigit(x):
+def isdigit(x):
     try:
         float(x)
         return True
@@ -65,7 +65,7 @@ while start == "y":
                 # CHECK amount of coins
                 if float(n_den_1) > 0:
                     # Check amount of coins
-                    if isDigit(n_den_1):
+                    if isdigit(n_den_1):
                         denomination_2 = input(
                             'Goblin Banker: And what the denomination of the coins do you want to get? (copper/silver/electrum/gold/platinum): ')
                         # CHECK second denomination
@@ -111,7 +111,7 @@ while start == "y":
                 # input for exchange_2 and check is it number
                 # my_copper_input
                 my_copper_input = input("How much coppers do you have? : ")
-                if isDigit(my_copper_input) and (float(my_copper_input) >= 0):
+                if isdigit(my_copper_input) and (float(my_copper_input) >= 0):
                     my_copper = int(my_copper_input)
                 else:
                     print("Goblin Banker: What the hell are ", my_copper_input, "s",
@@ -119,7 +119,7 @@ while start == "y":
                     continue
                 # my_silver_input
                 my_silver_input = input("How much silvers do you have? : ")
-                if isDigit(my_silver_input) and (float(my_silver_input) >= 0):
+                if isdigit(my_silver_input) and (float(my_silver_input) >= 0):
                     my_silver = int(my_silver_input)
                 else:
                     print("Goblin Banker: What the hell are ", my_silver_input, "s",
@@ -127,7 +127,7 @@ while start == "y":
                     continue
                 # my_electum_input
                 my_electum_input = input("How much electrums do you have? : ")
-                if isDigit(my_electum_input) and (float(my_electum_input) >= 0):
+                if isdigit(my_electum_input) and (float(my_electum_input) >= 0):
                     my_electum = int(my_electum_input)
                 else:
                     print("Goblin Banker: What the hell are ", my_electum_input, "s",
@@ -135,7 +135,7 @@ while start == "y":
                     continue
                 # my_gold_input
                 my_gold_input = input("How much golds do you have? : ")
-                if isDigit(my_gold_input) and (float(my_gold_input) >= 0):
+                if isdigit(my_gold_input) and (float(my_gold_input) >= 0):
                     my_gold = int(my_gold_input)
                 else:
                     print("Goblin Banker: What the hell are ", my_gold_input, "s",
@@ -143,7 +143,7 @@ while start == "y":
                     continue
                 # my_platinum_input
                 my_platinum_input = input("How much platinums do you have? : ")
-                if isDigit(my_platinum_input) and (float(my_platinum_input) >= 0):
+                if isdigit(my_platinum_input) and (float(my_platinum_input) >= 0):
                     my_platinum = int(my_platinum_input)
                 else:
                     print("Goblin Banker: What the hell are ", my_platinum_input, "s",
