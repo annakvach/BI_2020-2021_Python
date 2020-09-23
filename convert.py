@@ -4,7 +4,7 @@ print("(https://5thsrd.org/adventuring/equipment/coins/)")
 print()
 print("You have tons of coins that you earned in dangerous adventures and you want to exchange them.")
 print("So you are in bank.")
-print("(Goblin Banker may be disrespectful if he doesn't know what to do.)")
+print("(Goblin Bankerycharm pepe may be disrespectful if he doesn't know what to do.)")
 print()
 
 # make dictionary for coin exchange
@@ -78,7 +78,7 @@ while start == "y":
                                 denomination_2 == "platinum"):
                             for_dic = str(denomination_1 + 'to' + denomination_2)
                             # if all is ok - catch a value from dictionary
-                            if coin_dict.get(for_dic) != None:
+                            if coin_dict.get(for_dic) is not None:
                                 value_dic = coin_dict.get(for_dic)
                                 # equal exchange
                                 if (int(float(n_den_1) / float(value_dic))) > 1:
